@@ -1,0 +1,47 @@
+@layout('layouts.dashboard')
+
+@section('content')
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h4 class="card-title">Data Baru</h4>
+                    <p class="card-category">Lengkapi kolom berikut</p>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('dashboard.store') }}" method="POST">
+                        {{ csrfField() }}
+                        <div class="form-group">
+                            <label>Nama Bangunan</label>
+                            <input type="text" name="nama" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Tipe</label>
+                            <select name="type_id" class="form-control">
+                                <option value="1">Bisnis</option>
+                                <option value="2">Pendidikan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tinggi Bangunan (lantai)</label>
+                            <input type="text" name="bangunan" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Jarak Sungai (meter)</label>
+                            <input type="text" name="jarak_sungai" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Latitude</label>
+                            <input type="text" name="latitude" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Longitude</label>
+                            <input type="text" name="longitude" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

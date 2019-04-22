@@ -1,0 +1,81 @@
+@layout('layouts.dashboard')
+
+@section('style')
+    <style>
+        #maps {
+            width:1000px;
+            height:450px;
+        }
+    </style>
+@endsection
+
+@section('content')
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h4 class="card-title">Lokasi Pendidikan dan Bisnis</h4>
+                    <p class="card-category">Pemetaan bangunan pendidikan dan bisnis terhadap risiko bencana gempa bumi</p>
+                </div>
+                <div class="card-body">
+                    <div id="maps"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('script')
+    <script>
+        const places = {{{ toJSON(places) }}}
+
+        var map = new google.maps.Map(document.getElementById('maps'), {
+            center: {lat: -7.967073, lng: 112.632468},
+            zoom: 13
+        })
+
+        places.forEach(place => {
+            let marker = new google.maps.Marker({
+                position: { lat: place.latitude, lng: place.longitude },
+                map: map,
+                icon: 'http://maps.google.com/mapfiles/ms/icons/' + markerColor(place.status),
+                title: place.nama
+            })
+
+            google.maps.event.addListener(marker, 'click', function() {
+                let measureTool = new MeasureTool(map, {
+                    contextMenu: false
+                })
+
+                measureTool.start([
+                    {lat: marker.position.lat(), lng: marker.position.lng()},
+                    {lat: -7.949750, lng: 112.616108}
+                ])
+
+                setTimeout(() => {
+                    measureTool.end()
+                }, 2000)
+            })
+        })
+
+        function markerColor(status) {
+            let color = null
+
+            switch (status) {
+                case 'Rawan':
+                    color = 'red-dot.png'
+                    break
+                case 'Sedang':
+                    color = 'yellow-dot.png'
+                    break
+                case 'Ringan':
+                    color = 'green-dot.png'
+                    break
+                default:
+                    break
+            }
+
+            return color
+        }
+    </script>
+@endsection
