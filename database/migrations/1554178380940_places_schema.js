@@ -14,6 +14,8 @@ class PlacesSchema extends Schema {
       table.double('latitude', 8, 6)
       table.double('longitude', 200, 6)
       table.string('status')
+      table.double('sungai_latitude', 8, 6)
+      table.double('sungai_longitude', 200, 6)
       table.timestamps()
     })
   }

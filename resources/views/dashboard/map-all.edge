@@ -43,16 +43,28 @@
             })
 
             google.maps.event.addListener(marker, 'click', function() {
+                // measure distance
                 let measureTool = new MeasureTool(map, {
                     contextMenu: false
                 })
 
                 measureTool.start([
                     {lat: marker.position.lat(), lng: marker.position.lng()},
-                    {lat: -7.949750, lng: 112.616108}
+                    {lat: place.sungai_latitude, lng: place.sungai_longitude}
                 ])
 
+                // tooltip
+                let tooltip = '<p><b>' + place.nama + '</b></p>'
+                                + '<p>Tinggi bangunan: ' + place.bangunan + ' lantai</p>'
+                                + '<p>Jarak sungai: ' + place.jarak_sungai + ' meter</p>'
+
+                let infowindow = new google.maps.InfoWindow({
+                    content: tooltip
+                })
+                infowindow.open(map,marker)
+
                 setTimeout(() => {
+                    infowindow.close(map, marker)
                     measureTool.end()
                 }, 2000)
             })

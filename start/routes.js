@@ -4,8 +4,6 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
-Route.on('/maps').render('maps')
-Route.on('/maps-google').render('maps-google')
 
 Route.get('/dashboard', 'DashboardController.index').as('dashboard.index')
 Route.get('/dashboard/create', 'DashboardController.create').as('dashboard.create')
