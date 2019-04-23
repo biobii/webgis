@@ -2,8 +2,9 @@
 
 ## Setup
 1. Clone `.env.example` and configure your database.
-2. Run `adonis key:generate`.
-3. Run migration and seeder.
-4. Run development server `adonis serve --dev`.
-5. Application running on `http://localhost:3333`.
-6. Done.
+2. Run `npm install`.
+3. Run `adonis key:generate`.
+4. Run migration and seeder with command `adonis migration:refresh --seed`.
+5. Run development server `adonis serve --dev`.
+6. Application running on `http://localhost:3333`.
+7. Done.
