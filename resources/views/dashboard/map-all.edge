@@ -34,6 +34,21 @@
             zoom: 13
         })
 
+        // drawing river polyline
+        var river = [
+          {lat: -7.949616, lng: 112.615978},
+          {lat: -7.951470, lng: 112.618560},
+          {lat: -7.954175, lng: 112.621564}
+        ]
+
+        var riverPath = new google.maps.Polyline({
+          path: river,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        })
+
         places.forEach(place => {
             let marker = new google.maps.Marker({
                 position: { lat: place.latitude, lng: place.longitude },
@@ -43,6 +58,8 @@
             })
 
             google.maps.event.addListener(marker, 'click', function() {
+                riverPath.setMap(map)
+
                 // measure distance
                 let measureTool = new MeasureTool(map, {
                     contextMenu: false
@@ -66,6 +83,7 @@
                 setTimeout(() => {
                     infowindow.close(map, marker)
                     measureTool.end()
+                    riverPath.setMap(null)
                 }, 2000)
             })
         })
