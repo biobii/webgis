@@ -131,4 +131,66 @@ module.exports = [{
     sungai_latitude: -7.943792,
     sungai_longitude: 112.607984
   },
+  {
+    type_id: 2,
+    nama: 'SMAS Katolik Cor Jesu',
+    bangunan: 2,
+    jarak_sungai: 181,
+    latitude: -7.967923, 
+    longitude: 112.632624,
+    sungai_latitude: -7.967923,
+    sungai_longitude: 112.632624
+  },
+  {
+    type_id: 2,
+    nama: 'Sekolah Menengah Atas Muhammadiyah I Malang',
+    bangunan: 2,
+    jarak_sungai: 50,
+    latitude: -7.964855, 
+    longitude: 112.627996,
+    sungai_latitude: -7.964515, 
+    sungai_longitude: 112.628441
+  },
+  {
+    type_id: 1,
+    nama: 'Alfamart BS Riadi 150',
+    bangunan: 1,
+    jarak_sungai: 23,
+    latitude: -7.963705, 
+    longitude: 112.627464,
+    sungai_latitude: -7.963583, 
+    sungai_longitude: 112.627648 
+  },
+  {
+    type_id: 2,
+    nama: 'Pendidikan Vokasi LP3I Malang',
+    bangunan: 2,
+    jarak_sungai: 18,
+    latitude: -7.961074, 
+    longitude: 112.626015,
+    sungai_latitude: -7.961024, 
+    sungai_longitude: 112.626184
+  },
+  {
+    type_id: 1,
+    nama: 'PT PLN (Persero) Dinoyo',
+    bangunan: 2,
+    jarak_sungai: 58,
+    latitude: -7.947831, 
+    longitude:112.614146,
+    sungai_latitude: -7.947703, 
+    sungai_longitude: 112.614700
+  },
+
+  {
+    type_id: 1,
+    nama: 'Sardo Swalayan',
+    bangunan: 3,
+    jarak_sungai: 37,
+    latitude: -7.946784, 
+    longitude: 112.608730,
+    sungai_latitude: -7.947007, 
+    sungai_longitude: 112.608504
+  },
+
 ]
