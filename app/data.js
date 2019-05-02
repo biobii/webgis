@@ -100,5 +100,35 @@ module.exports = [{
     longitude: 112.615435,
     sungai_latitude: -7.979472,
     sungai_longitude: 112.617473
-  }
+  },
+  {
+    type_id: 2,
+    nama: 'SDN Merjosari 1',
+    bangunan: 2,
+    jarak_sungai: 363,
+    latitude: -7.943150,
+    longitude: 112.603555,
+    sungai_latitude: -7.942997,
+    sungai_longitude: 112.600229
+  },
+  {
+    type_id: 2,
+    nama: 'SDN Merjosari 2',
+    bangunan: 2,
+    jarak_sungai: 346,
+    latitude: -7.943702,
+    longitude: 112.603305,
+    sungai_latitude: -7.943595,
+    sungai_longitude: 112.600134
+  },
+  {
+    type_id: 2,
+    nama: 'SD Islam Surya Buana',
+    bangunan: 3,
+    jarak_sungai: 111,
+    latitude: -7.944270,
+    longitude: 112.607136,
+    sungai_latitude: -7.943792,
+    sungai_longitude: 112.607984
+  },
 ]

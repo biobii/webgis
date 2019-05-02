@@ -28,7 +28,7 @@
 @section('script')
     <script>
         const places = {{{ toJSON(places) }}}
-
+        
         var map = new google.maps.Map(document.getElementById('maps'), {
             center: {lat: -7.967073, lng: 112.632468},
             zoom: 13
@@ -58,7 +58,7 @@
             })
 
             google.maps.event.addListener(marker, 'click', function() {
-                riverPath.setMap(map)
+                // riverPath.setMap(map)
 
                 // measure distance
                 let measureTool = new MeasureTool(map, {
@@ -98,7 +98,7 @@
                 case 'Sedang':
                     color = 'yellow-dot.png'
                     break
-                case 'Ringan':
+                case 'Rendah':
                     color = 'green-dot.png'
                     break
                 default:

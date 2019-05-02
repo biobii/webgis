@@ -43,6 +43,10 @@ class DashboardController {
     return view.render('dashboard.map-all', { places })
   }
 
+  async excel ({ view }) {
+    return view.render('dashboard.excel')
+  }
+
 }
 
 module.exports = DashboardController

@@ -10,3 +10,4 @@ Route.get('/dashboard/create', 'DashboardController.create').as('dashboard.creat
 Route.post('/dashboard/store', 'DashboardController.store').as('dashboard.store')
 Route.get('/dashboard/data', 'DashboardController.data').as('dashboard.data')
 Route.get('/dashboard/mapping', 'DashboardController.mapping').as('dashboard.mapping')
+Route.get('/dashboard/rules', 'DashboardController.excel').as('dashboard.excel')

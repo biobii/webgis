@@ -1,0 +1,103 @@
+@layout('layouts.dashboard')
+
+@section('content')
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h4 class="card-title">Klasifikasi</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Tinggi Bangunan</th>
+                                <th>Jarak Sungai</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Malang Town Square</td>
+                                    <td>4 lantai</td>
+                                    <td>439 meter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr>
+                    <p class="h4">Rule Klasifikasi</p>
+                    <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>No</th>
+                                    <th>Tinggi Bangunan</th>
+                                    <th>Jarak Sungai</th>
+                                    <th>Status</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kurang dari tiga lantai</td>
+                                        <td>Lebih dari tiga puluh meter</td>
+                                        <td>Rendah</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Kurang dari tiga lantai</td>
+                                        <td>Lima belas hingga tiga puluh meter</td>
+                                        <td>Rendah</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Kurang dari tiga lantai</td>
+                                        <td>Kurang dari lima belas meter</td>
+                                        <td>Sedang</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Tiga hingga empat lantai</td>
+                                        <td>Lebih dari tiga puluh meter</td>
+                                        <td>Sedang</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Tiga hingga empat lantai</td>
+                                        <td>Lima belas hingga tiga puluh meter</td>
+                                        <td>Sedang</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Tiga hingga empat lantai</td>
+                                        <td>Kurang dari lima belas meter</td>
+                                        <td>Sedang</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Lebih dari empat lantai</td>
+                                        <td>Lebih dari tiga puluh meter</td>
+                                        <td>Rawan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Lebih dari empat lantai</td>
+                                        <td>Lima belas hingga tiga puluh meter</td>
+                                        <td>Rawan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Lebih dari empat lantai</td>
+                                        <td>Kurang dari lima belas meter</td>
+                                        <td>Rawan</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
