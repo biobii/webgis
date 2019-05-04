@@ -11,3 +11,5 @@ Mapping schools and business places for potential damage if an earthquake occurs
 5. Run development server `adonis serve --dev`.
 6. Application running on `http://localhost:3333`.
 7. Done.
+
+Note: Don't forget to set your `Google Map API KEY` in `resources/views/layouts/dashboard.edge` line `161`.
