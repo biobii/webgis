@@ -6,18 +6,25 @@ const Rule = use('App/Traits/ClassificationRules')
 class DashboardController {
 
   async index ({ view }) {
-    return view.render('dashboard.index')
+    const bisnis = {
+      rendah: await Place.query().where('type_id', 1).where('status', 'Rendah').getCount(),
+      sedang: await Place.query().where('type_id', 1).where('status', 'Sedang').getCount(),
+      rawan: await Place.query().where('type_id', 1).where('status', 'Rawan').getCount()
+    }
+    const pendidikan = {
+      rendah: await Place.query().where('type_id', 2).where('status', 'Rendah').getCount(),
+      sedang: await Place.query().where('type_id', 2).where('status', 'Sedang').getCount(),
+      rawan: await Place.query().where('type_id', 2).where('status', 'Rawan').getCount()
+    }
+
+    return view.render('dashboard.index', {
+      bisnis, pendidikan
+    })
   }
 
   async data ({ request, view }) {
-    const binis_page = parseInt(request.get().bisnis_page) || 1
-    const pendidikan_page = parseInt(request.get().pendidikan_page) || 1
-
-    const bisnis = await Place.query().where('type_id', 1)
-      .paginate(binis_page, 10)
-
-    const pendidikan = await Place.query().where('type_id', 2)
-      .paginate(pendidikan_page, 10)
+    const bisnis = await Place.query().where('type_id', 1).fetch()
+    const pendidikan = await Place.query().where('type_id', 2).fetch()
 
     return view.render('dashboard.data', {
       bisnis: bisnis.toJSON(),

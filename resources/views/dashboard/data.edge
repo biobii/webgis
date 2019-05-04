@@ -12,7 +12,7 @@
                     <div class="table-responsive">
                         <table class="table">
                             <thead class=" text-primary">
-                                <th>ID</th>
+                                <th>No</th>
                                 <th>Nama</th>
                                 <th>Tinggi Bangunan</th>
                                 <th>Jarak Sungai</th>
@@ -21,9 +21,9 @@
                                 <th>Klasifikasi</th>
                             </thead>
                             <tbody>
-                                @each(item in pendidikan.data)
+                                @each(item in pendidikan)
                                     <tr>
-                                        <td>{{ item.id }}</td>
+                                        <td>{{ ($loop.index + 1) }}</td>
                                         <td>{{ item.nama }}</td>
                                         <td>{{ item.bangunan }} lantai</td>
                                         <td>{{ item.jarak_sungai }}m</td>
@@ -34,18 +34,6 @@
                                 @endeach
                             </tbody>
                         </table>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link"
-                                        href="?pendidikan_page={{ (pendidikan.page === 1) ? 1 : pendidikan.page - 1 }}">Previous</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link"
-                                        href="?pendidikan_page={{ (pendidikan.lastPage === pendidikan.page) ? pendidikan.page : pendidikan.page + 1 }}">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -63,7 +51,7 @@
                     <div class="table-responsive">
                         <table class="table">
                             <thead class=" text-primary">
-                                <th>ID</th>
+                                <th>No</th>
                                 <th>Nama</th>
                                 <th>Tinggi Bangunan</th>
                                 <th>Jarak Sungai</th>
@@ -72,9 +60,9 @@
                                 <th>Klasifikasi</th>
                             </thead>
                             <tbody>
-                                @each(item in bisnis.data)
+                                @each(item in bisnis)
                                     <tr>
-                                        <td>{{ item.id }}</td>
+                                        <td>{{ ($loop.index + 1) }}</td>
                                         <td>{{ item.nama }}</td>
                                         <td>{{ item.bangunan }} lantai</td>
                                         <td>{{ item.jarak_sungai }}m</td>
@@ -85,18 +73,6 @@
                                 @endeach
                             </tbody>
                         </table>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link"
-                                        href="?bisnis_page={{ (bisnis.page === 1) ? 1 : bisnis.page - 1 }}">Previous</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link"
-                                        href="?bisnis_page={{ (bisnis.lastPage === bisnis.page) ? bisnis.page : bisnis.page + 1 }}">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>

@@ -181,7 +181,6 @@ module.exports = [{
     sungai_latitude: -7.947703, 
     sungai_longitude: 112.614700
   },
-
   {
     type_id: 1,
     nama: 'Sardo Swalayan',
@@ -192,5 +191,4 @@ module.exports = [{
     sungai_latitude: -7.947007, 
     sungai_longitude: 112.608504
   },
-
 ]

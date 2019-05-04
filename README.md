@@ -1,7 +1,10 @@
-## WEBGIS - Mapping schools and business places for potential damage if an earthquake occurs. This project is used as a college assignment. Built using Adonisjs framework.
+### WebGIS
 
-## Setup
-1. Clone `.env.example` and configure your database.
+Mapping schools and business places for potential damage if an earthquake occurs. This project is used as a college assignment. Built using Adonisjs framework.
+
+### Setup Project
+
+1. Copy `.env.example` to `.env` and configure your database.
 2. Run `npm install`.
 3. Run `adonis key:generate`.
 4. Run migration and seeder with command `adonis migration:refresh --seed`.
