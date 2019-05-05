@@ -191,4 +191,94 @@ module.exports = [{
     sungai_latitude: -7.947007, 
     sungai_longitude: 112.608504
   },
+  {
+    type_id: 2,
+    nama: 'UIN Malang',
+    bangunan: 5,
+    jarak_sungai: 200,
+    latitude: -7.951391,
+    longitude: 112.607378,
+    sungai_latitude: -7.953761,
+    sungai_longitude:  112.602871
+  },
+  {
+    type_id: 2,
+    nama: 'Universitas Brawijaya',
+    bangunan: 11,
+    jarak_sungai: 382,
+    latitude: -7.952122,
+    longitude: 112.613936,
+    sungai_latitude: -7.950432,
+    sungai_longitude:  112.616768
+  },
+  {
+    type_id: 2,
+    nama: 'Universitas Islam Malang',
+    bangunan: 6,
+    jarak_sungai: 291,
+    latitude: -7.936474,
+    longitude: 112.606756,
+    sungai_latitude: -7.935857, 
+    sungai_longitude: 112.609234
+  },
+  {
+    type_id: 1,
+    nama: 'Pemerintah Kota Malang',
+    bangunan: 2,
+    jarak_sungai: 161,
+    latitude: -7.977788,
+    longitude: 112.633911,
+    sungai_latitude: -7.979467, 
+    sungai_longitude: 112.634104
+  },
+  {
+    type_id: 1,
+    nama: 'Hotel Savana',
+    bangunan: 7,
+    jarak_sungai: 178,
+    latitude: -7.962199, 
+    longitude: 112.636138,
+    sungai_latitude: -7.960892,
+    sungai_longitude:  112.637146 
+  },
+  {
+    type_id: 1,
+    nama: 'Transmart',
+    bangunan: 7,
+    jarak_sungai: 178,
+    latitude: -7.962199, 
+    longitude: 112.636138,
+    sungai_latitude: -7.960892,
+    sungai_longitude:  112.637146 
+  },
+  {
+    type_id: 2,
+    nama: 'Universitas Negeri Malang',
+    bangunan: 11,
+    jarak_sungai: 41,
+    latitude: -7.960961, 
+    longitude: 112.617435,
+    sungai_latitude: -7.960845,
+    sungai_longitude:  112.617703
+  },
+  {
+    type_id: 1,
+    nama: 'Rumah Sakit UB',
+    bangunan: 10,
+    jarak_sungai: 304,
+    latitude: -7.940856, 
+    longitude: 112.621601,
+    sungai_latitude: -7.943130, 
+    sungai_longitude:   112.620034
+  },
+  {
+    type_id: 2,
+    nama: 'Politeknik Negeri Malang',
+    bangunan: 10,
+    jarak_sungai: 120,
+    latitude: -7.946180,
+    longitude:  112.615506,
+    sungai_latitude: -7.947296, 
+    sungai_longitude:   112.614605
+  }
 ]
